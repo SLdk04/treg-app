@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "treg-app": {
+    "treg": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/treg-app",
+            "outputPath": "dist/treg",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeng/resources/themes/arya-purple/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -69,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "treg-app:build:production"
+              "browserTarget": "treg:build:production"
             },
             "development": {
-              "browserTarget": "treg-app:build:development"
+              "browserTarget": "treg:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "treg-app:build"
+            "browserTarget": "treg:build"
           }
         },
         "test": {
