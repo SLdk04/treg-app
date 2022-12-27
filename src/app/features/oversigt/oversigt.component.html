@@ -1,1 +1,36 @@
-<p>oversigt works!</p>
+<h1 style = "position:relative; left:600px; top:10px;">
+    Registrering af arbejdstimer
+</h1>
+
+
+
+<!-- <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+<button (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button>
+
+<p-confirmDialog [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    Content
+</p-confirmDialog> -->
+
+<p-calendar style = "position:relative; left:700px; top:60px;">
+    [(ngModel)]="value" inline="true">
+</p-calendar>
+<h5>Inline</h5>
+
+<p-calendar  [inline]="true" [showWeek]="true"></p-calendar>
+
+
+<h3 style = "position:relative; left:610px; top:120px;">
+    Antal timer arbejdet
+</h3>
+<input type="text" pInputText style = "position:relative; left:605px; top:120px;" />
+
+
+<h3 style = "position:relative; left:610px; top:120px;">
+    Arbejdsbeskrivelse
+</h3>
+<div class="field col-12 md:col-4" style = "position:relative; left:600px; top:120px;">
+    <span class="p-float-label">
+        <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="value10" pInputTextarea></textarea>
+    </span>
+</div>
